@@ -1,0 +1,26 @@
+body {
+/*padding: 30px;*/
+min-height: 2000px;
+padding-top: 70px;
+}
+
+#li1:hover{
+	color:#FFFFFF;
+	background:#A9A9A9;
+}
+#li2:hover{
+	color:#FFFFFF;
+	background:#A9A9A9;
+}
+#li3:hover{
+	color:#FFFFFF;
+	background:#A9A9A9;
+}
+#li4:hover{
+	color:#FFFFFF;
+	background:#A9A9A9;
+}
+.hover{
+	color:#FFFFFF;
+	background:#A9A9A9;
+}
