@@ -4,9 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    
+
     @* bootstrap *@
-    <link href="~/css/navbar.css" rel="stylesheet" />
     <link href="~/css/signin.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     @* 必要なスクリプト *@
@@ -16,7 +15,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body background="~/Image/background/JA_4-11-2013.jpg">
     <!-- ナビゲーションバー -->
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -26,27 +25,42 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Home", "Index", "Home", new { @class = "navbar-brand"})
+                @Html.ActionLink("Home", "Index", "Home", new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <!-- ボタン格納場所 -->
                 <ul class="nav navbar-nav">
-                    <li id=li2>@Html.ActionLink("Menu", "Index", "Home")</li>
-                    <li id=li3><a href="#contact">Search</a></li>
                     <li id=li4 class="dropdown">
-                        <a href="#" class="dropwdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b> </a>
+                        <a href="#" class="dropwdown-toggle" data-toggle="dropdown">MyPage<b class="caret"></b> </a>
                         <ul class="dropdown-menu hover">
-                            <li class="hover"><a href="#">Action</a></li>
-                            <li class="hover"><a href="#">Another Action</a></li>
+                            <li class="hover"><a href="#">Profile</a></li>
+                            <li class="hover"><a href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li id=li4 class="dropdown">
+                        <a href="#" class="dropwdown-toggle" data-toggle="dropdown">University<b class="caret"></b> </a>
+                        <ul class="dropdown-menu hover">
+                            <li class="hover"><a href="#">Search</a></li>
+                            <li class="hover"><a href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li id=li4 class="dropdown">
+                        <a href="#" class="dropwdown-toggle" data-toggle="dropdown">EventPage<b class="caret"></b> </a>
+                        <ul class="dropdown-menu hover">
+                            <li class="hover"><a href="#">スケジュール</a></li>
+                            <li class="hover"><a href="#">以前のイベント</a></li>
                         </ul>
                     </li>
                 </ul>
                 <!-- ここまでボタン格納場所 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="components/#navbar" class="btn btn-lg btn-primary" role="button"><font color="#ffffff">ログアウト</font></a></li>
+                </ul>
             </div>
+
         </div>
     </div>
     <!-- ナビゲーションバー -->
-
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")

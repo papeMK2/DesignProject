@@ -200,6 +200,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Image\background\JA_3-11-2013.jpg" />
+    <Content Include="Image\background\JA_4-11-2013.jpg" />
+    <Content Include="Image\background\JP_5-11-2013.jpg" />
+    <Content Include="Image\background\US_5-11-2013.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
