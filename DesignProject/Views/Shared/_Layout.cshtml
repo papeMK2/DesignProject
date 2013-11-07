@@ -32,9 +32,10 @@
                 <ul class="nav navbar-nav">
                     <li id=li4 class="dropdown">
                         <a href="#" class="dropwdown-toggle" data-toggle="dropdown">MyPage<b class="caret"></b> </a>
-                        <ul class="dropdown-menu hover">
+                        <ul class="dropdown-menu hover">  
                             <li class="hover"><a href="#">Profile</a></li>
-                            <li class="hover"><a href="#">Events</a></li>
+                            <li class="hover">@Html.ActionLink("Events", "MyEvents", "Home")</li>
+                            @*<li class="hover"><a href="#">Events</a></li>*@
                         </ul>
                     </li>
                     <li id=li4 class="dropdown">

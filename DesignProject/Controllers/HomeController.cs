@@ -21,5 +21,9 @@ namespace DesignProject.Controllers
             return View();
         }
 
+        public ActionResult MyEvents()
+        {
+            return View();
+        }
     }
 }
