@@ -4,22 +4,15 @@ min-height: 2000px;
 padding-top: 70px;
 }
 
-#li1:hover{
-	color:#FFFFFF;
+li:hover {
+    color:#FFFFFF;
 	background:#A9A9A9;
+    
 }
-#li2:hover{
-	color:#FFFFFF;
-	background:#A9A9A9;
-}
-#li3:hover{
-	color:#FFFFFF;
-	background:#A9A9A9;
-}
-#li4:hover{
-	color:#FFFFFF;
-	background:#A9A9A9;
-}
+    li:hover ul {
+        display:block;
+    }
+
 .hover{
 	color:#FFFFFF;
 	background:#A9A9A9;
