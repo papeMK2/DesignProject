@@ -25,5 +25,25 @@ namespace DesignProject.Controllers
         {
             return View();
         }
+
+        public ActionResult MyProfile()
+        {
+            return View();
+        }
+
+        public ActionResult EditMyProfile()
+        {
+            return View();
+        }
+
+        public ActionResult SelectSession()
+        {
+            return View();
+        }
+
+        public ActionResult SessionTemplate()
+        {
+            return View();
+        }
     }
 }

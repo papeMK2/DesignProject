@@ -13,6 +13,11 @@ li:hover {
         display:block;
     }
 
+li.nonHover:hover {
+    background-color: transparent;
+    color: #000000;
+}
+
 .hover{
 	color:#FFFFFF;
 	background:#A9A9A9;

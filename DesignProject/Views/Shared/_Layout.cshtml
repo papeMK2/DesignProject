@@ -1,10 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.ID = "08440 \n Tsubasa Yoshino";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
+    <link href="~/css/navbar.css" rel="stylesheet" />
     @* bootstrap *@
     <link href="~/css/signin.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
@@ -14,6 +19,13 @@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
+    <style>
+        body {
+            padding-top: 70px;
+            min-height:inherit;
+        }
+    </style>
 </head>
 <body background="~/Image/background/JA_4-11-2013.jpg">
     <!-- ナビゲーションバー -->
@@ -33,7 +45,7 @@
                     <li class="dropdown" style="display:inline">
                         <a href="#" class="dropwdown-toggle" data-toggle="dropdown">MyPage<b class="caret"></b> </a>
                         <ul class="dropdown-menu hover">  
-                            <li><a href="#">Profile</a></li>
+                            <li>@Html.ActionLink("Profile", "MyProfile", "Home")</li>
                             <li>@Html.ActionLink("Events", "MyEvents", "Home")</li>
                         </ul>
                     </li>
@@ -54,6 +66,8 @@
                 </ul>
                 <!-- ここまでボタン格納場所 -->
                 <ul class="nav navbar-nav navbar-right navbar-btn">
+                    <li class="nonHover"><label style="font-size:14px; display:inline-block; padding: 6px 12px;">@ViewBag.ID</label></li>
+                    @*<span class="label label-default">content</span>*@
                     <li><button type="button" class="btn btn-primary">@Html.ActionLink("ログアウト", "SignIn", "Home", new { @style = "color:#ffffff"})</button></li>
                 </ul>
             </div>

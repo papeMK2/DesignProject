@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Profile";
+    ViewBag.Name = "TsubasaYoshino";
+    ViewBag.Birth = "09/10/1992";
+    ViewBag.Id = "08440";
+    ViewBag.UnderGrad = "工学部";
+    ViewBag.Department = "情報工学科";
+}
+
+<link href="~/css/navbar.css" rel="stylesheet" />
+
+<style>
+    body {
+        min-height:inherit;
+    }
+</style>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>MyProfile</h1>
+        <button type="button" class="btn btn-primary">@Html.ActionLink("プロフィール編集", "EditMyProfile", "Home", new { @style = "color:#ffffff" })</button>
+        <hr style="border-top-color:#000000"/>
+        <div class="row">
+            <div class="col-md-2" style="height:auto">
+                <h2>画像とか？</h2>
+            </div>
+            <div class="col-md-10">
+                <p>学籍番号 :@ViewBag.Id</p>
+                <p>氏名 :@ViewBag.Name</p>
+                <p>生年月日 :@ViewBag.Birth</p>
+                <p>学部 :@ViewBag.UnderGrad</p>
+                <p>学科 :@ViewBag.Department</p>
+                <hr style="border-top-color:#000000" />
+            </div>
+        </div>
+    </div>
+</div>
