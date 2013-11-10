@@ -45,5 +45,11 @@ namespace DesignProject.Controllers
         {
             return View();
         }
+
+        public ActionResult click(object item, object message)
+        {
+            item = message;
+            return View();
+        }
     }
 }

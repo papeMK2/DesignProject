@@ -1,14 +1,28 @@
 ﻿@{
     ViewBag.Title = "MyEvents";
+    ViewBag.State = "参加予定";
 }
+
+
 
 <link href="~/css/navbar.css" rel="stylesheet" />
 
+<script type="text/javascript">
+    function hello(Value) {
+        alert("hoge");
+    }
+</script>
+
 <div class="container">
     <div class="jumbotron">
-        <h1>MyEvents</h1>
+        <div class="col-md-6">
+            <h1>MyEvents</h1>
+        </div>
+        <div class="col-md-6">
+            <h1>@ViewBag.State</h1>
+        </div>
         <div>
-            <button type="button" class="btn btn-primary">参加予定</button>
+            <button type="button" class="btn btn-primary" onclick="hello(Value)">参加予定</button>
             <button type="button" class="btn btn-primary">以前のイベント</button>
             <button type="button" class="btn btn-primary">追加と削除</button>
         </div>
