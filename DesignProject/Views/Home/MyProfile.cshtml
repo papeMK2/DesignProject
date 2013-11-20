@@ -1,10 +1,16 @@
 ﻿@{
+    DesignProject.Models.ProfileModels.getProfile();
     ViewBag.Title = "Profile";
-    ViewBag.Name = "TsubasaYoshino";
-    ViewBag.Birth = "09/10/1992";
-    ViewBag.Id = "08440";
-    ViewBag.UnderGrad = "工学部";
-    ViewBag.Department = "情報工学科";
+    //ViewBag.Name = "TsubasaYoshino";
+    ViewBag.Name = DesignProject.Models.ProfileModels.Name;
+    //ViewBag.Birth = "09/10/1992";
+    ViewBag.Birth = DesignProject.Models.ProfileModels.Birth;
+    //ViewBag.Id = "08440";
+    ViewBag.Id = DesignProject.Models.ProfileModels.Id;
+    //ViewBag.UnderGrad = "工学部";
+    ViewBag.UnderGrad = DesignProject.Models.ProfileModels.UnderGrad;
+    //ViewBag.Department = "情報工学科";
+    ViewBag.Department = DesignProject.Models.ProfileModels.Department;
 }
 
 <link href="~/css/navbar.css" rel="stylesheet" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,9 @@ namespace DesignProject.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "DesignProject";
+            ViewBag.Message = AccountModels.GetDateTime().ToString();
+
+            //ViewBag.Message = string.Format("現在時刻は{0}です", AccountModels.GetDateTime());
             return View();
         }
 
@@ -49,6 +53,18 @@ namespace DesignProject.Controllers
         public ActionResult click(object item, object message)
         {
             item = message;
+            return View();
+        }
+
+
+        public ActionResult Normal()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult LoginUser()
+        {
             return View();
         }
     }
