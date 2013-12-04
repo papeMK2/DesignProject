@@ -20,22 +20,12 @@ namespace DesignProject.Controllers
             return View();
         }
 
-        public ActionResult SignIn()
-        {
-            return View();
-        }
-
         public ActionResult MyEvents()
         {
             return View();
         }
 
         public ActionResult MyProfile()
-        {
-            return View();
-        }
-
-        public ActionResult EditMyProfile()
         {
             return View();
         }

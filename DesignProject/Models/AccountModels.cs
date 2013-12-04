@@ -16,6 +16,23 @@ namespace DesignProject.Models
         {
 
         }
+
+        public static bool GetAuth(string id, string password)
+        {
+            MySqlDataReader reader;
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter())
+                {
+                    string query = "select * from auth where ID=" + "\"" + id + "\"" + " and Pass=" + "\"" + password + "\"";
+                    adapter.SelectCommand = new MySqlCommand(query, connection);
+                    reader = adapter.SelectCommand.ExecuteReader();
+                    return reader.Read();
+                }
+            }
+        }
+
         public static DateTime GetDateTime()
         {
             MySqlDataReader reader;

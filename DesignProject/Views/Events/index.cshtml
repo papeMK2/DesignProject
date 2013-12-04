@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h2>過去のイベント一覧</h2>
+        <table class="table">
+            <tr>
+                <td><center>日時</center></td>
+                <td><center>会場</center></td>
+                <td><center>種類</center></td>
+                <td><center>URL</center></td>
+            </tr>
+            <tr>
+                <td><center>2013/11/09</center></td>
+                <td><center>NNCT</center></td>
+                <td><center>合同説明会</center></td>
+                <td><center>@Html.ActionLink("詳細", "EventTemplate", "Events")</center></td>
+                @*<td><center><input type="button" class="btn btn-primary" value="Link" onclick="location.href = 'http://www.yahoo.co.jp/'" /></center></td>*@
+            </tr>
+        </table>
+    </div>
+</div>

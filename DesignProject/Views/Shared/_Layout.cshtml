@@ -45,7 +45,8 @@
                     <li class="dropdown" style="display:inline">
                         <a href="#" class="dropwdown-toggle" data-toggle="dropdown">MyPage<b class="caret"></b> </a>
                         <ul class="dropdown-menu hover">  
-                            <li>@Html.ActionLink("Profile", "MyProfile", "Home")</li>
+                            <li>@Html.ActionLink("Profile", "MyProfile", "Profile")</li>
+                            @*<li><p class="navbar-coll">@Html.ActionLink("Events", "MyEvents", "Profile")</p></li>*@
                             <li>@Html.ActionLink("Events", "MyEvents", "Home")</li>
                         </ul>
                     </li>
@@ -59,8 +60,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropwdown-toggle" data-toggle="dropdown">EventPage<b class="caret"></b> </a>
                         <ul class="dropdown-menu hover">
-                            <li><a href="#">スケジュール</a></li>
-                            <li><a href="#">以前のイベント</a></li>
+                            <li><a href="#">@Html.ActionLink("Schedule", "Schedule", "Events")</a></li>
+                            <li><a href="#">@Html.ActionLink("過去のイベント", "Index", "Events")</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,7 +69,7 @@
                 <ul class="nav navbar-nav navbar-right navbar-btn">
                     <li class="nonHover"><label style="font-size:14px; display:inline-block; padding: 6px 12px;">@ViewBag.ID</label></li>
                     @*<span class="label label-default">content</span>*@
-                    <li><button type="button" class="btn btn-primary">@Html.ActionLink("ログアウト", "SignIn", "Home", new { @style = "color:#ffffff"})</button></li>
+                    <li><button type="button" class="btn btn-primary">@Html.ActionLink("ログアウト", "SignIn", "Account", new { @style = "color:#ffffff"})</button></li>
                 </ul>
             </div>
 

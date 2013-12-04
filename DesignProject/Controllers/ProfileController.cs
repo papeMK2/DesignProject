@@ -6,13 +6,20 @@ using System.Web.Mvc;
 
 namespace DesignProject.Controllers
 {
-    public class AccountController : Controller
+    public class ProfileController : Controller
     {
         //
-        // GET: /Account/
-        public ActionResult SignIn()
+        // GET: /Profile/
+
+        public ActionResult MyProfile()
         {
             return View();
         }
+
+        public ActionResult editMyProfile()
+        {
+            return View();
+        }
+
     }
 }

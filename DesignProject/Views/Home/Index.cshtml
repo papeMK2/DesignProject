@@ -1,5 +1,5 @@
 ﻿@{
-    DateTime time = new DateTime();
+    string huga = string.Empty;
     int hoge = 0;
 }
 
@@ -27,6 +27,7 @@
     function change() {
         @{
             hoge++;
+            huga = "hoge";
         }
         document.getElementById("hoge").innerText = "@hoge";
         "@hoge" = document.getElementById("hoge").innerText;
@@ -35,18 +36,8 @@
 
 <div class="container">
     <div class="jumbotron">
-        @*<div style="background-color:#00ff21">
-            <h1 style="margin-bottom:0px; margin-left: auto; margin-right: auto" id="hoge">@ViewBag.Message</h1>
-        </div>*@
         <div style="background-color: #ffffff; margin: 0px; padding: 0px">
             <img  src="~/Image/background/JP_5-11-2013.jpg" />
         </div>
-        @*<div style="background-color:#ffd800;">
-            <h1 style="margin: 0px; padding: 0px">infomation</h1>
-            <input type="button" name="send" value="send" id="send" onclick="change()" />
-        </div>*@
     </div>
 </div>
-@*<div class="container">
-        <form></form>
-    </div>*@

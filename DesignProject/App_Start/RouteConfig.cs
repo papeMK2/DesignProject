@@ -16,9 +16,7 @@ namespace DesignProject
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-                //defaults: new { Controller = "Home", action = "SignIn", id = UrlParameter.Optional }
-                defaults: new { Controller = "Account", action = "Login", id = UrlParameter.Optional }
+                defaults: new { Controller = "Account", action = "SignIn", id = UrlParameter.Optional }
             );
         }
     }

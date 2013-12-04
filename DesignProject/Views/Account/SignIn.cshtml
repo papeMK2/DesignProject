@@ -1,0 +1,29 @@
+﻿@{
+    if(Request["Id"] != null && Request["Password"] != null)
+        {
+            //認証書いていく
+            string id = Request["Id"];
+            string password = Request["Password"];
+            bool auth = DesignProject.Models.AccountModels.GetAuth(id, password);
+                    
+            <script>
+                document.location = "/Home/Index";
+            </script>
+        }
+}
+
+<div class="container">
+    <form class="form-signin" action="">
+        <h2 class="form-signin-heading"><font color="#ffffff">Please Sign In</font></h2>
+        <input type="text" class="form-control" name="Id" placeholder="Student ID" />
+        <input type="password" class="form-control" name="Password" placeholder="PassWord" />
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me" />
+            Remember Me
+        </label>
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+    </form>
+</div>
+
+@* 自分のためのページ *@
+@* イベント関連のページ *@
