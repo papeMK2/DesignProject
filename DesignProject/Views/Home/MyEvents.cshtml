@@ -11,9 +11,23 @@
     function hello() {
         alert("hoge");
     }
-    function changeMode(state) {
-        alert(state);
-        document.getElementById("state").innerHTML = "@ViewBag.State = state";
+    function changeMode(st) {
+        document.getElementById("state").innerHTML = st;
+        if (st == "参加予定") {
+            //参加予定のテーブルからデータ引っ張る
+            alert("hoge");
+            var table = document.getElementById("event");
+            var row = table.insertRow(table.rows.length);
+            var td = row.insertCell(row.cells.length);
+        }
+        else {
+            //以前参加したテーブルから引っ張る
+            var table = document.getElementById("event");
+            var row = table.insertRow(table.rows.length);
+            var cel1 = row.insertCell(0);
+            cel1.setAttribute("hoge", "huga", "hoge", "hugahuga", "foobar");
+            
+        }
     }
 </script>
 
@@ -26,13 +40,13 @@
             <h1 id="state">@ViewBag.State</h1>
         </div>
         <div>
-            <button type="button" class="btn btn-primary" onclick="hello()">参加予定</button>
-            <button type="button" class="btn btn-primary" onclick="changeMode(view);">以前のイベント</button>
-            <button type="button" class="btn btn-primary">追加と削除</button>
+            <button type="button" class="btn btn-primary" onclick="changeMode('参加予定')">参加予定</button>
+            <button type="button" class="btn btn-primary" onclick="changeMode('以前のイベント');">以前のイベント</button>
+            <button type="button" class="btn btn-primary" >追加と削除</button>
         </div>
         <hr style="border-top-color:#000000" />
         <h2>詳細</h2>
-        <table class="table">
+        <table class="table" id="event">
             <tr>
                 <td><center>日時</center></td>
                 <td><center>会場</center></td>
